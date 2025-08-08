@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dahjom Typing Tool for Students</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+      .main-content {
+    padding: 30px 10px !important;
+    align-items: center !important;
+      }
+
+      .stat-card {
+        padding:10px !important;
+        align-items: center !important;
+      }
+
+      .stats-display {
+    display: flex !important;
+    gap:10px !important;   
+}
+
+.header-bar {
+  padding: 10px 10px !important;
+}
+
+      .difficulty-btn {
+    width: 320px !important;
+    padding: 12px 0px !important;
+      }
+
+      .difficulty-selector{
+    display: flex;
+    gap: 15px;
+    width: 320px !important;
+}
+
+
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      text-decoration: none;
+      color: white;
+      background-color: #007BFF;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #0056b3;
+    }
+
+    #cont {
+      display: none;
+      margin-top: 15px;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    #show:target #cont {
+      display: block;
+    }
+
+    #show:target .open-btn {
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+
+
+
+
+
         * {
             margin: 0;
             padding: 0;
@@ -747,6 +817,7 @@
             .sidebar {
                 width: 100%;
                 position: relative;
+                height:100%;
             }
             .main-content {
                 margin-left: 0;
@@ -777,6 +848,13 @@
                 <p>Age: <span id="userAge"></span></p>
             </div>
 
+
+
+<div class="box" id="show">
+    <a href="#show" style="position:absolute; top:0px; left:0px; background:transparent !important; color:red; font-size:25px;" class="button open-btn">⚙️</a>
+
+    <div id="cont">
+      <a href="#hide" style="width:100%; text-align:center;" class="button">Close Setting</a>
             <div class="settings-panel">
                 <h3>⚙️ Quick Settings</h3>
                 <div class="settings-grid">
@@ -836,6 +914,15 @@
                 </div>
             </div>
 
+<div class="action-buttons">
+                    <button class="btn-icon" id="fullscreenBtn" title="Fullscreen">🖥️</button>
+                    <button class="btn-icon" id="resetUserBtn" title="Change User">👤</button>
+                </div>
+
+    </div>
+  </div>
+            
+
             <div class="progress-card">
                 <div class="progress-label">🏆 Daily Progress</div>
                 <div class="progress-bar">
@@ -863,14 +950,13 @@
                     <button class="difficulty-btn" data-level="hard">🌳 Hard</button>
                 </div>
 
-                <div class="action-buttons">
-                    <button class="btn-icon" id="fullscreenBtn" title="Fullscreen">🖥️</button>
-                    <button class="btn-icon" id="resetUserBtn" title="Change User">👤</button>
-                </div>
+                
             </div>
+
 
             <div class="stats-display">
                 <div class="stat-card">
+                  
                     <div class="stat-icon">⏱️</div>
                     <div class="stat-label">Time</div>
                     <div class="stat-value" id="time">60s</div>
@@ -889,6 +975,7 @@
                     <div class="stat-icon">❌</div>
                     <div class="stat-label">Mistakes</div>
                     <div class="stat-value" id="errors">0</div>
+                    
                 </div>
             </div>
 
@@ -905,76 +992,7 @@
                 </div>
             </div>
 
-            <div class="keyboard-section">
-                <div class="keyboard-row">
-                    <div class="key" data-key="`">`</div>
-                    <div class="key" data-key="1">1</div>
-                    <div class="key" data-key="2">2</div>
-                    <div class="key" data-key="3">3</div>
-                    <div class="key" data-key="4">4</div>
-                    <div class="key" data-key="5">5</div>
-                    <div class="key" data-key="6">6</div>
-                    <div class="key" data-key="7">7</div>
-                    <div class="key" data-key="8">8</div>
-                    <div class="key" data-key="9">9</div>
-                    <div class="key" data-key="0">0</div>
-                    <div class="key" data-key="-">-</div>
-                    <div class="key" data-key="=">=</div>
-                    <div class="key wide" data-key="Backspace">⌫</div>
-                </div>
-                <div class="keyboard-row">
-                    <div class="key wide" data-key="Tab">Tab</div>
-                    <div class="key" data-key="q">Q</div>
-                    <div class="key" data-key="w">W</div>
-                    <div class="key" data-key="e">E</div>
-                    <div class="key" data-key="r">R</div>
-                    <div class="key" data-key="t">T</div>
-                    <div class="key" data-key="y">Y</div>
-                    <div class="key" data-key="u">U</div>
-                    <div class="key" data-key="i">I</div>
-                    <div class="key" data-key="o">O</div>
-                    <div class="key" data-key="p">P</div>
-                    <div class="key" data-key="[">[</div>
-                    <div class="key" data-key="]">]</div>
-                    <div class="key" data-key="\\">\</div>
-                </div>
-                <div class="keyboard-row">
-                    <div class="key extra-wide" data-key="CapsLock">Caps</div>
-                    <div class="key" data-key="a">A</div>
-                    <div class="key" data-key="s">S</div>
-                    <div class="key" data-key="d">D</div>
-                    <div class="key" data-key="f">F</div>
-                    <div class="key" data-key="g">G</div>
-                    <div class="key" data-key="h">H</div>
-                    <div class="key" data-key="j">J</div>
-                    <div class="key" data-key="k">K</div>
-                    <div class="key" data-key="l">L</div>
-                    <div class="key" data-key=";">;</div>
-                    <div class="key" data-key="'">'</div>
-                    <div class="key extra-wide" data-key="Enter">Enter</div>
-                </div>
-                <div class="keyboard-row">
-                    <div class="key extra-wide" data-key="Shift">Shift</div>
-                    <div class="key" data-key="z">Z</div>
-                    <div class="key" data-key="x">X</div>
-                    <div class="key" data-key="c">C</div>
-                    <div class="key" data-key="v">V</div>
-                    <div class="key" data-key="b">B</div>
-                    <div class="key" data-key="n">N</div>
-                    <div class="key" data-key="m">M</div>
-                    <div class="key" data-key=",">,</div>
-                    <div class="key" data-key=".">.</div>
-                    <div class="key" data-key="/">/</div>
-                    <div class="key extra-wide" data-key="Shift">Shift</div>
-                </div>
-                <div class="keyboard-row">
-                    <div class="key wide" data-key="Control">Ctrl</div>
-                    <div class="key wide" data-key="Alt">Alt</div>
-                    <div class="key space" data-key=" ">Space</div>
-                    <div class="key wide" data-key="Alt">Alt</div>
-                    <div class="key wide" data-key="Control">Ctrl</div>
-                </div>
-            </div>
+            
         </div>
     </div>
 
@@ -1786,7 +1804,4 @@
     </script>
 </body>
 </html>
-
-
-
 
