@@ -6,7 +6,6 @@
     <title>Dahjom Typing Tool for Students</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-
       .main-content {
     padding: 30px 10px !important;
     align-items: center !important;
@@ -896,6 +895,13 @@
                     </div>
                 </div>
 
+                <div class="voice-selector" style="margin-top: 20px;">
+                    <h4 style="color: #5f27cd; margin-bottom: 15px; font-size: 1.1em;">🎤 Voice Selection</h4>
+                    <select id="voiceSelect" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 0.95em; font-family: inherit; outline: none; cursor: pointer;">
+                        <option value="">Default Voice</option>
+                    </select>
+                </div>
+
                 <div class="fun-facts-toggle" style="margin-top: 15px;">
                     <div class="setting-card" style="width: 100%;">
                         <span class="icon">💡</span>
@@ -909,8 +915,8 @@
             </div>
 
 <div class="action-buttons">
-    <button class="btn-icon" id="fullscreenBtn" title="Fullscreen">🖥️</button>
-                    <button class="btn-icon" id="resetUserBtn" title="Change User">Logout1</button>
+                    <button class="btn-icon" id="fullscreenBtn" title="Fullscreen">🖥️</button>
+                    <button class="btn-icon" id="resetUserBtn" title="Change User">👤</button>
                 </div>
 
     </div>
@@ -1244,8 +1250,8 @@
         // Speak welcome message
         function speakWelcome() {
             if (!speechSynth) return;
-            const utterance = new SpeechSynthesisUtterance('Terima kasih ${name}! Semoga anda menaip dengan lebih pantas lagi');
-            utterance.lang = 'ms-MY';
+            const utterance = new SpeechSynthesisUtterance('Please apna naam add karo, aur saath mein age bhi, tabhi main aapko aage le jaaunga');
+            utterance.lang = 'hi-IN';
             utterance.rate = 0.9;
             speechSynth.speak(utterance);
         }
@@ -1323,8 +1329,7 @@
             welcomeModal.style.display = 'none';
             
             // Speak greeting
-            const utterance = new SpeechSynthesisUtterance(`Selamat Datang ${name}! Jom kita menaip bersama!`);
-            utterance.lang = 'ms-MY';
+            const utterance = new SpeechSynthesisUtterance(`Welcome ${name}! Let's have fun typing!`);
             speechSynth.speak(utterance);
         });
 
@@ -1799,6 +1804,4 @@
     </script>
 </body>
 </html>
-
-
 
