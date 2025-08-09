@@ -1250,8 +1250,8 @@
         // Speak welcome message
         function speakWelcome() {
             if (!speechSynth) return;
-            const utterance = new SpeechSynthesisUtterance('Please apna naam add karo, aur saath mein age bhi, tabhi main aapko aage le jaaunga');
-            utterance.lang = 'hi-IN';
+            const utterance = new SpeechSynthesisUtterance('Please saya suka makan, hari ini saya cuti, hobi saya memasak');
+            utterance.lang = 'my-MY';
             utterance.rate = 0.9;
             speechSynth.speak(utterance);
         }
@@ -1329,7 +1329,8 @@
             welcomeModal.style.display = 'none';
             
             // Speak greeting
-            const utterance = new SpeechSynthesisUtterance(`Welcome ${name}! Let's have fun typing!`);
+            const utterance = new SpeechSynthesisUtterance(`Selamat Datang ${name}! Mari kita melukis bersama!`);
+            utterance.lang = 'my-MY';
             speechSynth.speak(utterance);
         });
 
@@ -1804,3 +1805,4 @@
     </script>
 </body>
 </html>
+
