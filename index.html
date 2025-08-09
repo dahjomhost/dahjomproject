@@ -893,7 +893,7 @@
                         <span class="icon">🎚️</span>
                         <span class="setting-label">Volume</span>
                         <div class="volume-control">
-                            <input type="range" id="volumeSlider" min="0" max="100" value="50" class="volume-slider">
+                            <input type="range" id="volumeSlider" min="0" max="100" value="100" class="volume-slider">
                             <div class="volume-value" id="volumeValue">50%</div>
                         </div>
                     </div>
@@ -1086,7 +1086,7 @@
         // Settings - API key is hardcoded and hidden from user
         let settings = {
             soundEnabled: true,
-            volume: 50,
+            volume: 100,
             voiceEnabled: true,
             aiEnabled: false,
             funFactsEnabled: true,
@@ -1107,6 +1107,7 @@
         let isTestActive = false;
         let lastWordEnd = 0;
         let encouragementTimeout = null;
+        let utterance.lang = 'en-SG';
 
         // Sample texts
         const texts = {
@@ -1809,6 +1810,7 @@
     </script>
 </body>
 </html>
+
 
 
 
