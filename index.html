@@ -6,6 +6,9 @@
     <title>Dahjom Typing Tool for Students</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        .btn-icon {
+    width: 100% !important;
+}
       .main-content {
     padding: 30px 10px !important;
     align-items: center !important;
@@ -1251,7 +1254,7 @@
         function speakWelcome() {
             if (!speechSynth) return;
             const utterance = new SpeechSynthesisUtterance('Please apna naam add karo, aur saath mein age bhi, tabhi main aapko aage le jaaunga');
-            utterance.lang = 'hi-IN';
+            utterance.lang = 'id-ID';
             utterance.rate = 0.9;
             speechSynth.speak(utterance);
         }
@@ -1330,6 +1333,7 @@
             
             // Speak greeting
             const utterance = new SpeechSynthesisUtterance(`Welcome ${name}! Let's have fun typing!`);
+            utterance.lang = 'id-ID';
             speechSynth.speak(utterance);
         });
 
@@ -1804,4 +1808,5 @@
     </script>
 </body>
 </html>
+
 
