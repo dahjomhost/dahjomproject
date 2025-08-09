@@ -6,10 +6,6 @@
     <title>Dahjom Typing Tool for Students</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        btn-icon1 {
-            display:none !important;
-            position:fixed !important; top:-100px !important; left:0px !important;
-        }
         .btn-icon {
     width: 100% !important;
 }
@@ -1257,7 +1253,7 @@
         // Speak welcome message
         function speakWelcome() {
             if (!speechSynth) return;
-            const utterance = new SpeechSynthesisUtterance('Please apna naam add karo, aur saath mein age bhi, tabhi main aapko aage le jaaunga');
+            const utterance = new SpeechSynthesisUtterance('Jumpa Lagi ${name}, Semoga anda berjaya menaip dengan pantas!');
             utterance.lang = 'id-ID';
             utterance.rate = 0.9;
             speechSynth.speak(utterance);
@@ -1336,7 +1332,7 @@
             welcomeModal.style.display = 'none';
             
             // Speak greeting
-            const utterance = new SpeechSynthesisUtterance(`Welcome ${name}! Let's have fun typing!`);
+            const utterance = new SpeechSynthesisUtterance(`Selamat Datang ${name}! Jom Kita Menaip Bersama!`);
             utterance.lang = 'id-ID';
             speechSynth.speak(utterance);
         });
@@ -1812,6 +1808,7 @@
     </script>
 </body>
 </html>
+
 
 
 
