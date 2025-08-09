@@ -1253,7 +1253,7 @@
         // Speak welcome message
         function speakWelcome() {
             if (!speechSynth) return;
-            const utterance = new SpeechSynthesisUtterance('Jumpa Lagi ${name}, Semoga anda berjaya menaip dengan pantas!');
+            const utterance = new SpeechSynthesisUtterance('Jumpa Lagi kawan, Semoga anda berjaya menaip dengan pantas!');
             utterance.lang = 'id-ID';
             utterance.rate = 0.9;
             speechSynth.speak(utterance);
@@ -1808,6 +1808,7 @@
     </script>
 </body>
 </html>
+
 
 
 
