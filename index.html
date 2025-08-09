@@ -1254,7 +1254,7 @@
         function speakWelcome() {
             if (!speechSynth) return;
             const utterance = new SpeechSynthesisUtterance('Please saya suka makan, hari ini saya cuti, hobi saya memasak');
-            utterance.lang = 'my-MY';
+            utterance.lang = 'id-ID';
             utterance.rate = 0.9;
             speechSynth.speak(utterance);
         }
@@ -1333,7 +1333,7 @@
             
             // Speak greeting
             const utterance = new SpeechSynthesisUtterance(`Selamat Datang ${name}! Mari kita melukis bersama!`);
-            utterance.lang = 'my-MY';
+            utterance.lang = 'id-ID';
             speechSynth.speak(utterance);
         });
 
@@ -1808,6 +1808,7 @@
     </script>
 </body>
 </html>
+
 
 
 
