@@ -6,9 +6,6 @@
     <title>Dahjom Typing Tool for Students</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .btn-icon {
-    width: 100% !important;
-}
       .main-content {
     padding: 30px 10px !important;
     align-items: center !important;
@@ -918,8 +915,8 @@
             </div>
 
 <div class="action-buttons">
-                    
-                    <button class="btn-icon" id="resetUserBtn" title="Change User">Logout</button>
+                    <button class="btn-icon" id="fullscreenBtn" title="Fullscreen">🖥️</button>
+                    <button class="btn-icon" id="resetUserBtn" title="Change User">👤</button>
                 </div>
 
     </div>
@@ -1253,8 +1250,8 @@
         // Speak welcome message
         function speakWelcome() {
             if (!speechSynth) return;
-            const utterance = new SpeechSynthesisUtterance('Please saya suka makan, hari ini saya cuti, hobi saya memasak');
-            utterance.lang = 'id-ID';
+            const utterance = new SpeechSynthesisUtterance('Please apna naam add karo, aur saath mein age bhi, tabhi main aapko aage le jaaunga');
+            utterance.lang = 'hi-IN';
             utterance.rate = 0.9;
             speechSynth.speak(utterance);
         }
@@ -1332,8 +1329,7 @@
             welcomeModal.style.display = 'none';
             
             // Speak greeting
-            const utterance = new SpeechSynthesisUtterance(`Selamat Datang ${name}! Mari kita melukis bersama!`);
-            utterance.lang = 'id-ID';
+            const utterance = new SpeechSynthesisUtterance(`Welcome ${name}! Let's have fun typing!`);
             speechSynth.speak(utterance);
         });
 
@@ -1808,8 +1804,4 @@
     </script>
 </body>
 </html>
-
-
-
-
 
